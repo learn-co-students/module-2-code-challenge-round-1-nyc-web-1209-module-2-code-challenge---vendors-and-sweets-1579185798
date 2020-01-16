@@ -1,0 +1,10 @@
+<h1><%=@sweet.name%></h1>
+
+<br>
+
+<h3>Vendors who carry us: </h3>
+<ul>
+<%@vendors.each do |vendor|%>
+<li><%=link_to vendor.name, vendor_path(vendor)%></li>
+<%end%>
+<ul>
