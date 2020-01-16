@@ -1,0 +1,6 @@
+All about <%= @vendor.name %>
+<br><br>
+What they Sell:<br>
+<% @vendor.sweets.each do |sweet| %>
+<li><%= link_to sweet.name, sweet_path(sweet) %></li>
+<% end %>

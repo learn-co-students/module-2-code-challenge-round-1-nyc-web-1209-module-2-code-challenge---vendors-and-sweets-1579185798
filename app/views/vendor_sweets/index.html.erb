@@ -1,0 +1,6 @@
+<h1>VendorSweets#index</h1>
+<p>Find me in app/views/vendor_sweets/index.html.erb</p>
+<% @vendorsweets.each do |vendorsweet| %>
+<%= vendorsweet.sweet_id %>
+<% end %>
+<%= button_to "New Vendor Sweet", new_vendor_sweet_path, method: :get %>

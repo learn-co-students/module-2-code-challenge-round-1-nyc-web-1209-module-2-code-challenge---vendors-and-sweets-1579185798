@@ -1,0 +1,7 @@
+All about <%= @sweet.name %>
+<br><br>
+All vendors:
+<br>
+<% @sweet.vendors.each do |vendor| %>
+<%= link_to vendor.name, vendor_path(vendor) %><br>
+<% end %>
