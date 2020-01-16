@@ -15,7 +15,7 @@ In this repo, there is a Rails application with some features built out. Your jo
 
 ## Setup
 
-Before you begin coding your solution, clone this repo and then `cd` into it. Then run `bundle install`, `rails db:migrate`, and `rails db:seed` to install dependencies and set up the database, and run `rails s` to start the server.
+<!-- Before you begin coding your solution, clone this repo and then `cd` into it. Then run `bundle install`, `rails db:migrate`, and `rails db:seed` to install dependencies and set up the database, and run `rails s` to start the server. -->
 
 ## Domain
 
@@ -51,54 +51,54 @@ Vendor
 
 ## Instructions
 
-Update the code of the application to meet the following deliverables. Follow RESTful naming conventions and the MVC pattern to divide responsibility.
+<!-- Update the code of the application to meet the following deliverables. Follow RESTful naming conventions and the MVC pattern to divide responsibility. -->
 
-***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
+<!-- ***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.*** -->
 
 ### 1. Create VendorSweet model
 
-Update the schema and models to add the `VendorSweet` model. It should have:
+<!-- Update the schema and models to add the `VendorSweet` model. It should have: -->
 
-- a vendor
-- a sweet
-- a price (use an integer data type for this column: we'll treat the numbers in it as the price, in cents).
+<!-- - a vendor -->
+<!-- - a sweet -->
+<!-- - a price (use an integer data type for this column: we'll treat the numbers in it as the price, in cents). -->
 
-In the rails console, check that your code works by creating your first `VendorSweet` with a given `Sweet`, `Vendor`, and price.
+<!-- In the rails console, check that your code works by creating your first `VendorSweet` with a given `Sweet`, `Vendor`, and price. -->
 
 ### 2. VendorSweet Create Form
 
-A user should be able to visit a page to link a vendor and a sweet. The form should let them:
+<!-- A user should be able to visit a page to link a vendor and a sweet. The form should let them: -->
 
-- choose a `Vendor` from a select dropdown
-- choose a `Sweet` from a select dropdown
-- enter a price
-- submit the form to create a `VendorSweet`
+<!-- - choose a `Vendor` from a select dropdown -->
+<!-- - choose a `Sweet` from a select dropdown -->
+<!-- - enter a price -->
+<!-- - submit the form to create a `VendorSweet` -->
 
 Once the `VendorSweet` is created, the user should be redirected to the selected vendor's show page.
 
 ### 3. Vendor show page
 
 The show page for a Vendor should include:
-
+<!-- 
 - the Vendor's name (ie. Insomnia Cookies)
 - a list of the Sweets that they sell
-- each Sweet in the list should link to that Sweet's show page
+- each Sweet in the list should link to that Sweet's show page -->
 
 ### 4. Sweet Show page
 
 The Sweet's show page should include:
-
+<!-- 
 - the Sweet's name
 - a list of Vendors that sell this Sweet
-- each Vendor in the list should link to that Vendor's show page
+- each Vendor in the list should link to that Vendor's show page -->
 
 ### 5. Vendor Index page links
 
-On the Vendors index page, we should see a list of vendor's names. Each name should link to the Vendor's show page.
+<!-- On the Vendors index page, we should see a list of vendor's names. Each name should link to the Vendor's show page. -->
 
 ### 6. Sweets index page links
 
-On the Sweets index page, we should see a list of sweet's names. Each name should link to the Sweet's show page.
+<!-- On the Sweets index page, we should see a list of sweet's names. Each name should link to the Sweet's show page. -->
 
 ### 7. VendorSweet Validations
 
