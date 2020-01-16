@@ -1,0 +1,9 @@
+<h1><%= @sweet.name %></h1>
+<p>Vendors: </p>
+<% if @sweet.vendor_sweets.length > 0%>
+    <h3>Average Price of Sweet: </h3>
+    <p>$<%= @sweet.average_price %></p>
+<% end %>
+<% @vendors.uniq.each do |vendor| %>
+    <a href=<%= vendor_path(vendor.id) %>><%= vendor.name %></a>&nbsp Avg: $<%= vendor.average_price_of_sweeets %></p>
+<% end %>

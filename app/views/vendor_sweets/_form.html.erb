@@ -1,0 +1,18 @@
+<%= form_for @vendor_sweet do |f| %>
+    <label>Vendor: </label>
+    <%= f.collection_select :vendor_id, @vendors, :id, :name %><br><br>
+    <label>Sweet: </label>
+    <%= f.collection_select :sweet_id, @sweets, :id, :name %><br><br>
+    <label>Price: </label>
+    <%= f.number_field :price%><br><br>
+    <%= f.submit%><br>
+<% end %>
+<% if flash[:error] %>
+    <ul class="red">
+        <% flash[:error].each do |key, value| %>
+            <% value.each do |message| %>
+                <li><%= content_tag :div, message%></li>
+            <% end %>
+        <% end %>
+    </ul>
+<% end %>
