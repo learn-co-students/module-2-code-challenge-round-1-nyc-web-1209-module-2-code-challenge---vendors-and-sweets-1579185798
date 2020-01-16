@@ -1,0 +1,16 @@
+<h1>New Vendor Sweet Page</h1>
+
+<% @vendor_sweet.errors.messages.each do |error| %> <%# This is the error message display prompt! It's, uh, functional. %>
+  <%= error %>
+<% end %>
+<div>
+<%= form_for @vendor_sweet do |f| %> <%# This is the form for creation. %>
+  <label>Vendor:</label><br>
+  <%= f.collection_select :vendor_id, Vendor.all, :id, :name %><br>
+  <label>Sweet:</label><br>
+  <%= f.collection_select :sweet_id, Sweet.all, :id, :name %><br>
+  <label>Price:</label><br>
+  <%= f.number_field :price%><br>
+  <%= f.submit %>
+<% end %>
+</div>

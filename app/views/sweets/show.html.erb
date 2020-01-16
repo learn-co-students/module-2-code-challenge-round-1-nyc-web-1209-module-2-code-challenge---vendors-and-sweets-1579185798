@@ -1,0 +1,6 @@
+<p> Name: <%=@sweet.name%>
+
+<p> Vendors: </p>
+<% @sweet.vendors.each do |vendor| %>
+<li><%= link_to vendor.name, vendor_path(vendor) %></li> <%# This links to the individual Vendor's show page. %>
+<% end %>
