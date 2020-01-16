@@ -2,6 +2,18 @@
 
 <ul>
   <% @vendors.each do |vendor| %>
-    <li><%= vendor.name %></li>
+    <li><%= link_to vendor.name, vendor_path(vendor) %></li>
   <% end  %>
+</ul>
+
+<br>
+<p><strong>Average Sweet Prices For All Vendors: </strong><%= @vendors.average_price %> cents</p>
+<p><strong>Average Price Per Vendor: </strong></p>
+<ul>
+<% @vendors.each do |vendor| %>
+<li><p><strong>Vendor Name: </strong><%= vendor.name %></li> 
+  <ul>
+  <li><p>Average Price Per Sweet: <%= vendor.average_price_by_vendor %></li>
+  </ul>
+<% end %>
 </ul>

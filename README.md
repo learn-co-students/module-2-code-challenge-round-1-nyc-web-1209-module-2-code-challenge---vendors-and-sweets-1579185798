@@ -45,7 +45,7 @@ Vendor
 
 | Column | Type |
 | ------------- | ------------- |
-| name  | String  |
+| name  | String  | 
 | created_at  | DateTime  |
 | updated_at  | DateTime  |
 

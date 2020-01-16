@@ -1,0 +1,21 @@
+<h1>New Vendor Sweet Form</h1>
+
+<% if flash[:errors] %>
+<ul>
+<% flash[:errors].each do |error| %>
+<li style="color:red"><%= error %></li>
+<% end  %>
+<% end  %>
+</ul>
+
+<%= form_for @vendor_sweet do |f| %>
+<p><%= f.label :vendor %>
+<%= f.collection_select :vendor_id, @vendors, :id, :name %></p>
+<p><%= f.label :sweet %>
+<%= f.collection_select :sweet_id, @sweets, :id, :name %></p>
+<p><%= f.label :price %>
+<%= f.number_field :price %><p>
+<%= f.submit %>
+<% end  %>
+
+<%= link_to "cancel action", vendors_path %>
