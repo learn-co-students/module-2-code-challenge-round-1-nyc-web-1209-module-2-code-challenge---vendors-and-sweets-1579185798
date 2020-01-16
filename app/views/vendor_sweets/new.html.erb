@@ -1,0 +1,16 @@
+<h1> Create An Order </h1>
+
+ <%= form_for vendor_sweets_path do |f| %>
+
+      <%= f.label :vendor %>
+     <%= f.collection_select :vendor_id, @vendors, :id, :name%>
+
+
+      <%= f.label :sweets %>
+      <%= f.collection_select :sweet_id, @sweets, :id, :name%>
+
+        <%= f.label :price %>
+      <%= f.number_field :price %>
+
+      <%= f.submit :submit %>
+     <% end %>
