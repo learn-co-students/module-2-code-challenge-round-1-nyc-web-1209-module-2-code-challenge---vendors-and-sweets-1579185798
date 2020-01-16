@@ -1,0 +1,13 @@
+<h1>New VendorSweet Form</h1><br>
+
+<%= form_for @vendor_sweet do |f| %>
+    <label>Select Vendor:</label><br>
+    <%= f.collection_select :vendor_id, Vendor.all, :id, :name %><br>
+    <label>Select Sweet:</label><br>
+    <%= f.collection_select :sweet_id, Sweet.all, :id, :name %><br>
+    <label>Please Enter Price:</label><br>
+    <%= f.number_field :price %>
+    <%= f.submit "Submit VendorSweet" %>
+<% end %>
+<br>
+<%= flash[:errors].join(" ") %>

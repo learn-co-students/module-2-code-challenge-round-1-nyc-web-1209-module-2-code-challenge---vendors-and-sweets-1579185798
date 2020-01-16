@@ -2,6 +2,15 @@
 
 <ul>
   <% @vendors.each do |vendor| %>
-    <li><%= vendor.name %></li>
-  <% end  %>
+    <li><%= link_to vendor.name, vendor_path(vendor) %></li>
+    <% vendor_specific_sweets = [] %>
+    <% end  %>
 </ul>
+
+<% sweets_prices = [] %>
+    <% @vendor_sweets.each do |vendor_sweet| %>
+      <% sweets_prices << vendor_sweet.price %>
+    <% end %>
+
+
+    Average Price of All Sweets: $<%= (sweets_prices.sum) / (sweets_prices.count) %>.00

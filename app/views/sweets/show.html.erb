@@ -1,0 +1,20 @@
+<h1>Sweet Show Page: <%= @sweet.name %></h1>
+
+<% vendor_specific_sweets = [] %>
+    <% @vendor_sweets.each do |vendor_sweet| %>
+        <% if vendor_sweet.sweet_id == @sweet.id %>
+            <% vendor_specific_sweets << vendor_sweet %>
+        <% end %>
+    <% end %> 
+
+<ul>
+    <% vendor_specific_sweets.each do |vendor_sweet| %>
+        <% @vendors.each do |vendor| %>
+            <% if vendor.id == vendor_sweet.vendor_id %>
+                <li>
+                    <%= link_to vendor.name, vendor_path(vendor) %>
+                </li>
+            <% end %>
+        <% end %>
+    <% end %> 
+</ul> 
