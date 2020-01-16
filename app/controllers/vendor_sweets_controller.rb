@@ -3,9 +3,9 @@ class VendorSweetsController < ApplicationController
     @vendorsweets = VendorSweet.all
   end
 
-  def show
-    @vendorsweet = VendorSweet.find(params[:id])
-  end
+  # def show
+  #   @vendorsweet = VendorSweet.find(params[:id])
+  # end
 
   def new
     @vendorsweet = VendorSweet.new
@@ -14,8 +14,16 @@ class VendorSweetsController < ApplicationController
   end
 
   def create
-    @vendorsweet = VendorSweet.create!(vendorsweet_params)
+    @vendorsweet = VendorSweet.create(vendorsweet_params)
     redirect_to vendor_path(@vendorsweet.vendor)
+
+    # if @vendorsweet.valid?
+    #   redirect_to vendor_path(@vendorsweet.vendor)
+    # else
+    #   flash[:errors] = @vendorsweet.errors.full_messages
+    #   redirect_to new_vendor_sweet_path
+    # end
+
   end
 
   private

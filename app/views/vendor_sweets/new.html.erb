@@ -1,5 +1,10 @@
 new form
 <br>
+<!--<% if flash[:errors].each do |error| %>
+<div><%= error %></div>
+<% end %>
+<% end %>-->
+<br>
 <%= form_for @vendorsweet do |f| %>
 <%= f.label "Vendor:" %>
 <%= f.collection_select :vendor_id, @vendors, :id, :name %>

@@ -71,7 +71,7 @@ A user should be able to visit a page to link a vendor and a sweet. The form sho
 
 - choose a `Vendor` from a select dropdown
 - choose a `Sweet` from a select dropdown
-- enter a price --> cannot enter a float
+- enter a price -->
 <!-- - submit the form to create a `VendorSweet` -->
 
 <!-- Once the `VendorSweet` is created, the user should be redirected to the selected vendor's show page. -->
